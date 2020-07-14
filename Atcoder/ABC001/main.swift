@@ -6,7 +6,4 @@
 //  Copyright © 2020 Louise Joe Shen. All rights reserved.
 //
 
-import Foundation
-
-print("Hello, World!")
-
+import Foundation;

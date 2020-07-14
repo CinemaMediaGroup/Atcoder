@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B461FAB824BD73BD0044F033 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461FAB724BD73BD0044F033 /* main.swift */; };
+		B461FAC224BD77D60044F033 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461FAC124BD77D60044F033 /* main.swift */; };
+		B461FAC824BD7A720044F033 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461FAC724BD7A720044F033 /* A.swift */; };
+		B46DFCD124BDA12F000B873C /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46DFCD024BDA12F000B873C /* B.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,11 @@
 
 /* Begin PBXFileReference section */
 		B461FAB424BD73BD0044F033 /* Atcoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Atcoder; sourceTree = BUILT_PRODUCTS_DIR; };
-		B461FAB724BD73BD0044F033 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B461FAC124BD77D60044F033 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B461FAC724BD7A720044F033 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
+		B46DFCCF24BD96D5000B873C /* A.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = A.md; sourceTree = "<group>"; };
+		B46DFCD024BDA12F000B873C /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
+		B46DFCD224BDA148000B873C /* B.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = B.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,37 @@
 		B461FAB624BD73BD0044F033 /* Atcoder */ = {
 			isa = PBXGroup;
 			children = (
-				B461FAB724BD73BD0044F033 /* main.swift */,
+				B461FABE24BD747F0044F033 /* ABC001 */,
 			);
 			path = Atcoder;
+			sourceTree = "<group>";
+		};
+		B461FABE24BD747F0044F033 /* ABC001 */ = {
+			isa = PBXGroup;
+			children = (
+				B461FAC124BD77D60044F033 /* main.swift */,
+				B461FAC324BD77F90044F033 /* A */,
+				B461FAC424BD78070044F033 /* B */,
+			);
+			path = ABC001;
+			sourceTree = "<group>";
+		};
+		B461FAC324BD77F90044F033 /* A */ = {
+			isa = PBXGroup;
+			children = (
+				B461FAC724BD7A720044F033 /* A.swift */,
+				B46DFCCF24BD96D5000B873C /* A.md */,
+			);
+			path = A;
+			sourceTree = "<group>";
+		};
+		B461FAC424BD78070044F033 /* B */ = {
+			isa = PBXGroup;
+			children = (
+				B46DFCD024BDA12F000B873C /* B.swift */,
+				B46DFCD224BDA148000B873C /* B.md */,
+			);
+			path = B;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +128,7 @@
 				TargetAttributes = {
 					B461FAB324BD73BD0044F033 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -120,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B461FAB824BD73BD0044F033 /* main.swift in Sources */,
+				B46DFCD124BDA12F000B873C /* B.swift in Sources */,
+				B461FAC224BD77D60044F033 /* main.swift in Sources */,
+				B461FAC824BD7A720044F033 /* A.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +280,15 @@
 		B461FABC24BD73BD0044F033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -252,7 +296,13 @@
 		B461FABD24BD73BD0044F033 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
